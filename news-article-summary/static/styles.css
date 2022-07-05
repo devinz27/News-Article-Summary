@@ -1,0 +1,33 @@
+.title{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+ 
+}
+
+.input{
+    display:flex;
+    flex-direction: column;
+}
+.summarize{
+    display:flex;
+    flex-direction: column;
+}
+
+.textSummary{
+    width:70vw;
+}
+.input-text{
+    height:15vh
+}
+
+.submit{
+    background-color: rgba(0, 162, 255, 0.901);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+	<title>News Article Summary</title>
+</head>
+<body>
+	<div class="title">
+		<h1>News Article Summary</h1>	
+	</div>
+
+	<div class="container">
+		<form action="{{ url_for('summarize')}}" method="POST">
+    		<h2>Enter News Article link or Text</h2>
+			<div class="input">
+				<input name="articleText" placeholder="article link"></input>
+				<br>
+				<textarea name="inputText" placeholder="input text" class="input-text"></textarea>
+			</div>
+    		<br/>
+    		<h2>Enter Desired Number of Sentences</h2>
+			<div class="summarize">
+				<input name="numOfLines" type="text"></input>
+				<br>
+				<button type="submit" value="Summarize" class="submit">Summarize</button>
+			</div>
+			<br>
+			<h3 class="textSummary">{{ text_summary }}</h3>
+    	</form>
+		
+	</div>
+</body>
+</html>
+
